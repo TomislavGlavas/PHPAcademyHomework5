@@ -4,7 +4,6 @@ require 'Cover/Get.php';
 require 'Instrument/View.php';
 require 'Musician/Person.php';
 require 'Main/App.php';
-require 'Date/Prefix.php';
 
 function getClass( $project_path ){
 
@@ -39,11 +38,6 @@ $classes = getClass(__DIR__);
 $chosen = $classes[array_rand($classes)];
 
 $app = new \Main\App();
-$x = new $chosen();
-$p = new \Date\Prefix();
-$date = $p->date;
-$x->date = $date;
-var_dump($x);
 $app->echoClass($chosen);
 
 

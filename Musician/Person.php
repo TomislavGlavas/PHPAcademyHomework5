@@ -2,7 +2,6 @@
 
 namespace Musician;
 
-require_once 'Date/Prefix.php';
 
 class Person
 {   
@@ -11,9 +10,6 @@ class Person
     {      
             echo  __CLASS__;  
     }
-
-    public static $p = new \Date\Prefix();
-    public $t= $p->date;
 
 
 
